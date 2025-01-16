@@ -1,16 +1,1088 @@
 ---
+import { Image } from "astro:assets";
+import contactImage from "../assets/images/fire-damage-assessments/contact.jpg";
+import heroImage from "../assets/images/fire-damage-assessments/hero.jpg";
+import googleLogo from "../assets/images/fire-damage-assessments/logos/google.png";
+import thumbtackLogo from "../assets/images/fire-damage-assessments/logos/thumbtack.png";
+import yelpLogo from "../assets/images/fire-damage-assessments/logos/yelp.png";
+import reportImage from "../assets/images/fire-damage-assessments/report.jpg";
+import siteVisitImage from "../assets/images/fire-damage-assessments/site-visit.jpg";
+import teamsImage from "../assets/images/fire-damage-assessments/teams.jpg";
+import jenniferImage from "../assets/images/fire-damage-assessments/users/Jennifer.png";
+import michaelImage from "../assets/images/fire-damage-assessments/users/Michael.png";
+import { ContactButton } from '../components/ContactButton';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  
+		
+
+		<main>
+			<!-- Hero Section -->
+			<section class="py-10 md:py-24">
+				<div
+					class="container mx-auto grid gap-12 px-4 md:grid-cols-2 md:items-center"
+				>
+					<div class="space-y-8">
+						<div>
+							<p class="text-sm uppercase font-medium text-blue-600">
+								Rebuild Stronger
+							</p>
+							<h1
+								class="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-gray-900"
+							>
+								Expert Post-Wildfire Structural Inspection
+							</h1>
+						</div>
+						<p class="text-lg text-gray-600">
+							Wildfire damage? Serving Southern California with professional
+							structural inspections and certified reports for your insurance
+							claims. Our reliable assessments help protect your property and
+							maximize settlement outcomes.
+						</p>
+						<ContactButton client:load>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="mr-2 h-5 w-5"
+							>
+								<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+								<line x1="16" y1="2" x2="16" y2="6"></line>
+								<line x1="8" y1="2" x2="8" y2="6"></line>
+								<line x1="3" y1="10" x2="21" y2="10"></line>
+							</svg>
+							Get Free Consultation
+						</ContactButton>
+					</div>
+					<div class="relative aspect-square">
+						<div class="absolute inset-0 bg-gray-100 rounded-2xl"></div>
+						<Image
+							src={heroImage}
+							alt="Professional structural engineer inspecting fire damage"
+							class="absolute inset-0 h-full w-full rounded-2xl object-cover"
+							width={800}
+							height={800}
+							quality={90}
+							format="webp"
+							loading="eager"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<!-- Stats Section -->
+			<section class="border-y bg-gray-50 py-16">
+				<div class="container mx-auto px-4">
+					<p class="mb-12 text-center text-sm font-medium text-gray-600">
+						Our Track Record
+					</p>
+					<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+						<div
+							class="flex flex-col items-center justify-center text-center p-6"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="h-8 w-8 mb-4 text-blue-600"
+							>
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+								<polyline points="22 4 12 14.01 9 11.01"></polyline>
+							</svg>
+							<span class="text-3xl md:text-4xl font-bold text-gray-900"
+								>2000+</span
+							>
+							<span class="text-sm text-gray-600 mt-2">Projects</span>
+						</div>
+						<div
+							class="flex flex-col items-center justify-center text-center p-6"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="h-8 w-8 mb-4 text-blue-600"
+							>
+								<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+								<circle cx="9" cy="7" r="4"></circle>
+								<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+								<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+							</svg>
+							<span class="text-3xl md:text-4xl font-bold text-gray-900"
+								>1000+</span
+							>
+							<span class="text-sm text-gray-600 mt-2">Clients</span>
+						</div>
+						<div
+							class="flex flex-col items-center justify-center text-center p-6"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="h-8 w-8 mb-4 text-blue-600"
+							>
+								<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+								<line x1="16" y1="2" x2="16" y2="6"></line>
+								<line x1="8" y1="2" x2="8" y2="6"></line>
+								<line x1="3" y1="10" x2="21" y2="10"></line>
+							</svg>
+							<span class="text-3xl md:text-4xl font-bold text-gray-900"
+								>20+</span
+							>
+							<span class="text-sm text-gray-600 mt-2"
+								>Years of experience</span
+							>
+						</div>
+						<div
+							class="flex flex-col items-center justify-center text-center p-6"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="h-8 w-8 mb-4 text-blue-600"
+							>
+								<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+								<circle cx="9" cy="7" r="4"></circle>
+								<polyline points="16 11 18 13 22 9"></polyline>
+							</svg>
+							<span class="text-3xl md:text-4xl font-bold text-gray-900"
+								>20+</span
+							>
+							<span class="text-sm text-gray-600 mt-2">Team Members</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			
+
+
+			<!-- Features Section -->
+			<section class="py-24">
+				<div class="container mx-auto px-4 flex flex-col items-center">
+					<div class="mb-16 max-w-3xl">
+						<h2 class="text-3xl font-bold md:text-4xl text-center">
+							Expert Structural Engineers Committed to Safety
+						</h2>
+						<p class="mt-4 text-lg text-gray-600 text-center">
+							PE-licensed experts with 20+ years in California, providing rapid
+							post-wildfire assessment and reconstruction. Your safety is our
+							priority.
+						</p>
+					</div>
+					<div class="grid gap-8 md:grid-cols-3">
+						<!-- Feature 1 -->
+						<div class="group relative space-y-4 rounded-2xl border p-8">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="h-8 w-8 text-blue-600 mb-4"
+							>
+								<circle cx="12" cy="12" r="10"></circle>
+								<polyline points="12 6 12 12 16 14"></polyline>
+							</svg>
+							<h3 class="text-xl font-bold">Rapid Disaster Inspection</h3>
+							<p class="text-gray-600">
+								Expert structural evaluation within 24-48 hours of site access
+								clearance. We provide detailed damage reports and reconstruction
+								recommendations that meet all California building codes.
+							</p>
+						</div>
+
+						<!-- Feature 2 -->
+						<div class="group relative space-y-4 rounded-2xl border p-8">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="h-8 w-8 text-blue-600 mb-4"
+							>
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+								<polyline points="22 4 12 14.01 9 11.01"></polyline>
+							</svg>
+							<h3 class="text-xl font-bold">Structural Reconstruction</h3>
+							<p class="text-gray-600">
+								Complete structural design and engineering solutions for
+								rebuilding your home, including fire-resistant materials and
+								enhanced safety features.
+							</p>
+						</div>
+
+						<!-- Feature 3 -->
+						<div class="group relative space-y-4 rounded-2xl border p-8">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="h-8 w-8 text-blue-600 mb-4"
+							>
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+							</svg>
+							<h3 class="text-xl font-bold">Safety Compliance</h3>
+							<p class="text-gray-600">
+								All reconstruction plans are fully compliant with current
+								California fire codes and local building regulations, ensuring
+								long-term safety and property value.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Process Section -->
+			<section class="border-y bg-gray-50 py-24">
+				<div class="container mx-auto px-4">
+					<div class="mb-16 text-center">
+						<h2 class="text-3xl font-bold md:text-4xl">
+							Our 3-Step Inspection Process
+						</h2>
+						<p class="mt-4 text-lg text-gray-600">
+							We provide a systematic approach to evaluate fire damage and
+							support your insurance claims. Here's how we work:
+						</p>
+					</div>
+					<div class="relative">
+						<div
+							class="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-blue-100 hidden md:block"
+						></div>
+
+						<div class="grid gap-16 md:gap-8">
+							<!-- Step 1 -->
+							<div class="relative grid md:grid-cols-2 items-center gap-8">
+								<div
+									class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border h-full flex flex-col justify-center"
+								>
+									<div class="relative">
+										<div class="absolute -top-12 -left-4 md:static">
+											<span
+												class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold"
+											>
+												01
+											</span>
+										</div>
+										<h3 class="text-xl font-bold mt-6 md:mt-4">
+											Free Initial Consultation
+										</h3>
+										<p class="text-gray-600 mt-2">
+											Schedule a no-cost consultation to assess your
+											fire-damaged property and develop a preliminary evaluation
+											plan for comprehensive structural inspection.
+										</p>
+									</div>
+								</div>
+								<div
+									class="aspect-[4/3] relative rounded-2xl overflow-hidden bg-gray-100 h-full"
+								>
+									<Image
+										src={contactImage}
+										alt="Free Initial Consultation"
+										class="w-full h-full object-cover"
+										width={600}
+										height={450}
+									/>
+								</div>
+							</div>
+
+							<!-- Step 2 -->
+							<div class="relative grid md:grid-cols-2 items-center gap-8">
+								<div
+									class="aspect-[4/3] relative rounded-2xl overflow-hidden bg-gray-100 h-full"
+								>
+									<Image
+										src={siteVisitImage}
+										alt="Professional On-Site Inspection"
+										class="w-full h-full object-cover"
+										width={600}
+										height={450}
+									/>
+								</div>
+								<div
+									class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border h-full flex flex-col justify-center"
+								>
+									<div class="relative">
+										<div class="absolute -top-12 -left-4 md:static">
+											<span
+												class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold"
+											>
+												02
+											</span>
+										</div>
+										<h3 class="text-xl font-bold mt-6 md:mt-4">
+											Professional On-Site Inspection
+										</h3>
+										<p class="text-gray-600 mt-2">
+											Our licensed engineers conduct thorough on-site
+											inspections using advanced equipment to evaluate
+											structural integrity and document all damage conditions.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- Step 3 -->
+							<div class="relative grid md:grid-cols-2 items-center gap-8">
+								<div
+									class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border h-full flex flex-col justify-center"
+								>
+									<div class="relative">
+										<div class="absolute -top-12 -left-4 md:static">
+											<span
+												class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 font-bold"
+											>
+												03
+											</span>
+										</div>
+										<h3 class="text-xl font-bold mt-6 md:mt-4">
+											Professional Inspection Report
+										</h3>
+										<p class="text-gray-600 mt-2">
+											Receive a comprehensive structural assessment report with
+											detailed analysis, photos, and recommendations, certified
+											by our licensed engineers for your records and insurance
+											purposes.
+										</p>
+									</div>
+								</div>
+								<div
+									class="aspect-[4/3] relative rounded-2xl overflow-hidden bg-gray-100 h-full"
+								>
+									<Image
+										src={reportImage}
+										alt="Professional Inspection Report"
+										class="w-full h-full object-cover"
+										width={600}
+										height={450}
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Why Choose Us Section -->
+			<section class="py-24">
+				<div class="container mx-auto px-4">
+					<div class="grid gap-16 lg:grid-cols-2">
+						<!-- 左侧图片 - 在大屏幕显示 -->
+						<div class="hidden lg:block h-full">
+							<div class="relative h-full rounded-2xl overflow-hidden">
+								<Image
+									src={teamsImage}
+									alt="Our professional team"
+									class="w-full h-full object-cover"
+									width={800}
+									height={600}
+								/>
+							</div>
+						</div>
+
+						<!-- 右侧内容 -->
+						<div class="flex flex-col">
+							<div class="space-y-4">
+								<h2 class="text-[40px] font-bold leading-tight">
+									Why Choose Us?
+								</h2>
+								<p class="text-lg text-gray-600">
+									We deliver comprehensive structural design and assessment
+									solutions with a focus on safety, innovation, and client
+									satisfaction.
+								</p>
+							</div>
+
+							<!-- Features Grid -->
+							<div
+								class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-12 mt-8"
+							>
+								<!-- Feature 1 -->
+								<div class="space-y-3">
+									<div class="flex items-center gap-3">
+										<div class="flex-shrink-0">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="32"
+												height="32"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="h-8 w-8 text-blue-600"
+											>
+												<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+											</svg>
+										</div>
+										<h3
+											class="text-2xl font-bold leading-tight whitespace-nowrap"
+										>
+											Licensed Engineers
+										</h3>
+									</div>
+									<p
+										class="text-base text-gray-600 leading-relaxed pl-[2.25rem]"
+									>
+										Our team of certified structural engineers brings decades of
+										combined experience in California construction.
+									</p>
+								</div>
+
+								<!-- Feature 2 -->
+								<div class="space-y-3">
+									<div class="flex items-center gap-3">
+										<div class="flex-shrink-0">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="32"
+												height="32"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="h-8 w-8 text-blue-600"
+											>
+												<rect
+													x="2"
+													y="2"
+													width="20"
+													height="8"
+													rx="2"
+													ry="2"
+												></rect>
+												<rect
+													x="2"
+													y="14"
+													width="20"
+													height="8"
+													rx="2"
+													ry="2"
+												></rect>
+												<line x1="6" y1="6" x2="6.01" y2="6"></line>
+												<line x1="6" y1="18" x2="6.01" y2="18"></line>
+											</svg>
+										</div>
+										<h3
+											class="text-2xl font-bold leading-tight whitespace-nowrap"
+										>
+											Advanced Technology
+										</h3>
+									</div>
+									<p
+										class="text-base text-gray-600 leading-relaxed pl-[2.25rem]"
+									>
+										State-of-the-art structural analysis tools and thermal
+										imaging technology for precise assessments.
+									</p>
+								</div>
+
+								<!-- Feature 3 -->
+								<div class="space-y-3">
+									<div class="flex items-center gap-3">
+										<div class="flex-shrink-0">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="32"
+												height="32"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="h-8 w-8 text-blue-600"
+											>
+												<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+												<polyline points="22 4 12 14.01 9 11.01"></polyline>
+											</svg>
+										</div>
+										<h3
+											class="text-2xl font-bold leading-tight whitespace-nowrap"
+										>
+											Insurance Reports
+										</h3>
+									</div>
+									<p
+										class="text-base text-gray-600 leading-relaxed pl-[2.25rem]"
+									>
+										Professional assessment reports designed to maximize your
+										insurance claims, backed by certified engineers.
+									</p>
+								</div>
+
+								<!-- Feature 4 -->
+								<div class="space-y-3">
+									<div class="flex items-center gap-3">
+										<div class="flex-shrink-0">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="32"
+												height="32"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="h-8 w-8 text-blue-600"
+											>
+												<circle cx="12" cy="12" r="10"></circle>
+												<polyline points="12 6 12 12 16 14"></polyline>
+											</svg>
+										</div>
+										<h3
+											class="text-2xl font-bold leading-tight whitespace-nowrap"
+										>
+											Free Consultation
+										</h3>
+									</div>
+									<p
+										class="text-base text-gray-600 leading-relaxed pl-[2.25rem]"
+									>
+										Free on-site inspection and consultation, followed by a
+										comprehensive professional report for your property.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- 左侧图片 - 在小屏幕显示 -->
+						<div class="block lg:hidden h-[400px]">
+							<div class="relative h-full rounded-2xl overflow-hidden">
+								<Image
+									src={teamsImage}
+									alt="Our professional team"
+									class="w-full h-full object-cover"
+									width={800}
+									height={600}
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- Reviews Section -->
+<section class="py-24 bg-white overflow-hidden">
+	<div class="container mx-auto px-4">
+		<div class="text-center mb-16">
+			<h2 class="text-4xl font-bold">
+				Trusted by Homeowners Across California
+			</h2>
+			<p class="mt-4 text-lg text-gray-600">
+				See what our clients say about our structural engineering services
+				across different platforms
+			</p>
+		</div>
+
+		<div class="relative -mx-4 px-4">
+			<div class="review-scroll max-w-[1536px] mx-auto overflow-hidden">
+				<div class="review-scroll-content flex gap-8">
+					<!-- Review Card 1 -->
+					<div
+						class="flex-shrink-0 w-[400px] bg-white rounded-xl p-8 shadow-sm border"
+						role="article"
+					>
+						<div class="flex items-center justify-between mb-6">
+							<Image
+								src={thumbtackLogo}
+								alt="Thumbtack Logo"
+								width={120}
+								height={40}
+								class="object-contain"
+							/>
+							<div
+								class="flex gap-1"
+								role="group"
+								aria-label="Rating: 5.0 out of 5 stars"
+							>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+							</div>
+						</div>
+						<blockquote class="text-gray-600 mb-4">
+							<p>
+								&ldquo;After the wildfire damaged our home, Mason
+								conducted an incredibly thorough inspection. His detailed
+								report helped us understand the full extent of structural
+								damage. The thermal imaging really showed issues we
+								couldn't see. Worth every penny!&rdquo;
+							</p>
+						</blockquote>
+						<div class="flex items-center gap-3">
+							<div class="w-10 h-10 rounded-full overflow-hidden">
+								<Image
+									src={michaelImage}
+									alt="Michael Rodriguez's profile picture"
+									width={40}
+									height={40}
+									class="w-full h-full object-cover"
+								/>
+							</div>
+							<div>
+								<p class="font-semibold">Michael Rodriguez</p>
+								<p class="text-sm text-gray-500">Pacific Palisades, CA</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Review Card 2 -->
+					<div
+						class="flex-shrink-0 w-[400px] bg-white rounded-xl p-8 shadow-sm border"
+						role="article"
+					>
+						<div class="flex items-center justify-between mb-6">
+							<Image
+								src={googleLogo}
+								alt="Google Logo"
+								width={100}
+								height={40}
+								class="object-contain"
+							/>
+							<div
+								class="flex gap-1"
+								role="group"
+								aria-label="Rating: 4.8 out of 5 stars"
+							>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-gray-200 fill-gray-200"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+							</div>
+						</div>
+						<blockquote class="text-gray-600 mb-4">
+							<p>
+								&ldquo;Called Cecilia Home after our insurance company was
+								dragging their feet. Their assessment was comprehensive
+								and the report quality was exceptional. They found
+								significant damage that wasn't visible to the naked eye.
+								Highly professional team.&rdquo;
+							</p>
+						</blockquote>
+						<div class="flex items-center gap-3">
+							<div class="w-10 h-10 rounded-full overflow-hidden">
+								<Image
+									src={jenniferImage}
+									alt="Jennifer Wilson's profile picture"
+									width={40}
+									height={40}
+									class="w-full h-full object-cover"
+								/>
+							</div>
+							<div>
+								<p class="font-semibold">Jennifer Wilson</p>
+								<p class="text-sm text-gray-500">Pasadena, CA</p>
+							</div>
+						</div>
+					</div>
+					<!-- Review Card 3 -->
+					<div
+						class="flex-shrink-0 w-[400px] bg-white rounded-xl p-8 shadow-sm border"
+						role="article"
+					>
+						<div class="flex items-center justify-between mb-6">
+							<Image
+								src={yelpLogo}
+								alt="Yelp Logo"
+								width={100}
+								height={40}
+								class="object-contain"
+							/>
+							<div
+								class="flex gap-1"
+								role="group"
+								aria-label="Rating: 5.0 out of 5 stars"
+							>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+								<svg
+									class="h-5 w-5 text-yellow-400 fill-yellow-400"
+									viewBox="0 0 24 24"
+								>
+									<polygon
+										points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+									/>
+								</svg>
+							</div>
+						</div>
+						<blockquote class="text-gray-600 mb-4">
+							<p>
+								&ldquo;Outstanding service from start to finish! Their engineering team provided an incredibly detailed assessment of our fire-damaged property. The thermal imaging analysis revealed hidden structural issues we would have missed. Their report was crucial for our insurance claim.&rdquo;
+							</p>
+						</blockquote>
+						<div class="flex items-center gap-3">
+							<div class="w-10 h-10 rounded-full overflow-hidden">
+								<Image
+									src={michaelImage}
+									alt="Thomas Anderson's profile picture"
+									width={40}
+									height={40}
+									class="w-full h-full object-cover"
+								/>
+							</div>
+							<div>
+								<p class="font-semibold">Thomas Anderson</p>
+								<p class="text-sm text-gray-500">Santa Barbara, CA</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Add more review cards here -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+			<!-- CTA Section -->
+			<section class="py-24">
+				<div class="container mx-auto px-4">
+					<div class="rounded-2xl bg-gradient-to-br from-blue-700 to-blue-900 p-12 text-center md:p-24 text-white">
+						<h2 class="text-3xl font-bold md:text-4xl">
+							Get Professional Help for Your Fire-Damaged Home!
+						</h2>
+						<p class="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
+							Facing property damage from recent wildfires? Our licensed
+							structural engineers are here to help protect your interests.
+							Schedule a free consultation today for a thorough damage
+							inspection and expert insurance claim support.
+						</p>
+						<div class="mt-8 flex flex-wrap justify-center gap-4">
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
+								<ContactButton client:idle>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="mr-2 h-5 w-5"
+									>
+										<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+										<line x1="16" y1="2" x2="16" y2="6"></line>
+										<line x1="8" y1="2" x2="8" y2="6"></line>
+										<line x1="3" y1="10" x2="21" y2="10"></line>
+									</svg>
+									Get Free Consultation
+								</ContactButton>
+								<a
+									href="tel:+15109091933"
+									class="flex items-center justify-center gap-2 text-white hover:text-blue-100 transition-colors border border-white/20 rounded-full px-4 py-2 hover:border-white/40"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="h-5 w-5"
+									>
+										<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+									</svg>
+									<span class="text-sm font-medium">510 909 1933</span>
+								</a>
+							</div>
+						</div>
+							<!-- 添加特色标签 -->
+			<div class="mt-12 flex flex-wrap justify-center gap-8">
+				<div class="flex items-center text-blue-100">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="mr-2 h-5 w-5"
+					>
+						<circle cx="12" cy="12" r="10"></circle>
+						<polyline points="12 6 12 12 16 14"></polyline>
+					</svg>
+					<span>24/7 Emergency Response</span>
+				</div>
+				<div class="flex items-center text-blue-100">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="mr-2 h-5 w-5"
+					>
+						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+					</svg>
+					<span>Licensed Engineers</span>
+				</div>
+				<div class="flex items-center text-blue-100">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="mr-2 h-5 w-5"
+					>
+						<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+						<polyline points="22 4 12 14.01 9 11.01"></polyline>
+					</svg>
+					<span>Insurance Specialists</span>
+				</div>
+			</div>
+					</div>
+					
+				</div>
+				
+			</section>
+
+		
+		</main>
+
+		<!-- Footer -->
+		<footer class="border-t py-12">
+			<div class="container mx-auto px-4">
+				<!-- 主要内容区域 - 默认双列，lg 以上四列 -->
+				<div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+					<div>
+						<h3 class="mb-4 text-lg font-bold">Contact Us</h3>
+						<div class="space-y-2 text-sm text-gray-600">
+							<p>510 909 1933</p>
+							<p>contact@ceciliahome.net</p>
+							<p>3700 Wilshire Blvd, Suite 950</p>
+							<p>Los Angeles, CA 90010</p>
+						</div>
+					</div>
+
+					<div>
+						<h3 class="mb-4 text-lg font-bold">Services</h3>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li>
+								<a href="#">Post-Fire Inspection</a>
+							</li>
+							<li>
+								<a href="#">Structural Assessment</a>
+							</li>
+							<li>
+								<a href="#">Insurance Support</a>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="mb-4 text-lg font-bold">Company</h3>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li>
+								<a href="https://cecilia123.com/about-us">About Us</a>
+							</li>
+							<li>
+								<a href="https://cecilia123.com/about-us">Our Team</a>
+							</li>
+							<li>
+								<a href="https://cecilia123.com/contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="mb-4 text-lg font-bold">Legal</h3>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li>
+								<a href="#">Privacy Policy</a>
+							</li>
+							<li>
+								<a href="#">Terms of Service</a>
+							</li>
+							<li>
+								<a href="#">CA License No C-69809</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 版权信息 -->
+				<div class="mt-12 pt-8 border-t">
+					<p class="text-sm text-center text-gray-600">
+						©
+						
+						Cecilia Home. All rights reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+	
+</BaseLayout>

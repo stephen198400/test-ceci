@@ -1,0 +1,44 @@
+---
+
+import Footer from '../components/main/Footer.astro';
+import Nav from '../components/main/Nav.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = "Cecilia Home - Post-Wildfire Housing Reconstruction",
+  description = "专业的加州建筑和结构设计公司，专注于野火后房屋重建服务",
+  image = "/images/og-image.jpg",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+  </head>
+  <body class="min-h-screen bg-white">
+    <Nav />
+    <slot />
+    <Footer />
+    
+  </body>
+</html> 
