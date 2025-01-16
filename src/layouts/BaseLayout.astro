@@ -12,11 +12,11 @@ interface Props {
 }
 
 const {
-  title = "Cecilia Home - Post-Wildfire Housing Reconstruction",
-  description = "Professional California architectural and structural design firm, specializing in post-wildfire housing reconstruction",
+  title = "CMZ Studio - Professional Architectural & Structural Design Services",
+  description = "CMZ Studio offers expert architectural and structural design services in California. Specializing in post-wildfire reconstruction, residential design, and commercial projects.",
   image = "/images/og-image.jpg",
   canonicalURL = Astro.url,
-  keywords = "post-wildfire, housing reconstruction, California, architectural design, structural design",
+  keywords = "architectural design, structural engineering, post-wildfire reconstruction, California architecture, building design, CMZ Studio",
 } = Astro.props;
 ---
 
@@ -26,14 +26,11 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     
-    <!-- Google Search Console Verification -->
-    <!-- 将 Google Search Console 提供的 meta 标签粘贴在这里 -->
-    
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-    <meta name="author" content="Cecilia Home" />
+    <meta name="author" content="CMZ Studio" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalURL} />
     
@@ -43,6 +40,7 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
+    <meta property="og:site_name" content="CMZ Studio" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
