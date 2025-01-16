@@ -1,8 +1,12 @@
+# Global rules
 User-agent: *
 Allow: /
+Disallow:
 
+# Googlebot specific rules
 User-agent: Googlebot
 Allow: /
+Disallow:
 
 # Sitemap
 Sitemap: https://cmzstudio.com/sitemap-index.xml 
